@@ -4,3 +4,9 @@ prometheus-grafana/grafana/*
 prometheus-grafana/prometheus/*
 !prometheus-grafana/prometheus/prometheus.yml
 
+thanos-prometheus-grafana/grafana/*
+!thanos-prometheus-grafana/grafana/provisioning
+
+thanos-prometheus-grafana/prometheus/*
+!thanos-prometheus-grafana/prometheus/prometheus.yml
+
