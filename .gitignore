@@ -1,5 +1,6 @@
-grafana/*
-!grafana/provisioning
+prometheus-grafana/grafana/*
+!prometheus-grafana/grafana/provisioning
 
-prometheus/*
-!prometheus/prometheus.yml
+prometheus-grafana/prometheus/*
+!prometheus-grafana/prometheus/prometheus.yml
+
