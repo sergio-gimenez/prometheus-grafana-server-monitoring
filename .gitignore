@@ -10,3 +10,9 @@ thanos-prometheus-grafana/grafana/*
 thanos-prometheus-grafana/prometheus/*
 !thanos-prometheus-grafana/prometheus/prometheus.yml
 
+thanos-prometheus-grafana-all-in-one/grafana/*
+!thanos-prometheus-grafana-all-in-one/grafana/provisioning
+
+thanos-prometheus-grafana-all-in-one/prometheus/*
+!thanos-prometheus-grafana-all-in-one/prometheus/prometheus.yml
+
