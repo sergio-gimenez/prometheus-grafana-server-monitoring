@@ -7,7 +7,7 @@ networks:
 
 services:
   grafana:
-    image: grafana/grafana:{$GRAFANA_VERSION:-10.2.4}
+    image: grafana/grafana:${GRAFANA_VERSION:-10.2.4}
     user: "1000"
     container_name: grafana
     ports:
@@ -20,7 +20,7 @@ services:
       - monitoring
 
   thanos-querier:
-    image: quay.io/thanos/thanos:{THANOS_QUERIER_VERSION:-v0.34.1}
+    image: quay.io/thanos/thanos:${THANOS_QUERIER_VERSION:-v0.34.1}
     command:
       - "query"
       - "--grpc-address=0.0.0.0:10901"
