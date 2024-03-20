@@ -5,10 +5,10 @@ prometheus-grafana/prometheus/*
 !prometheus-grafana/prometheus/prometheus.yml
 !prometheus-grafana/prometheus/rules.yml
 
-thanos-prometheus-grafana/grafana/*
+thanos-prometheus-grafana-alertmanager/grafana/*
 !thanos-prometheus-grafana/grafana/provisioning
 
-thanos-prometheus-grafana-alert-manager/prometheus/data
+thanos-prometheus-grafana-alertmanager/prometheus/data
 
 thanos-prometheus-grafana-all-in-one/grafana/*
 !thanos-prometheus-grafana-all-in-one/grafana/provisioning
