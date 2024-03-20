@@ -1,0 +1,16 @@
+version: "3.7"
+
+networks:
+  monitoring:
+    driver: bridge
+    external: true
+
+services:
+  alert-manager:
+    image: prom/alertmanager:${ALERT_MANAGER_VERSION:-v0.27.0}
+    volumes:
+      - "./alertmanager/alertmanager.yml:/alertmanager/alertmanager.yml"
+    ports:
+      - 9093:9093
+    networks:
+      - monitoring
