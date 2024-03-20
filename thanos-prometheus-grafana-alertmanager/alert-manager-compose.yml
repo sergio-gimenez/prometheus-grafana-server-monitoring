@@ -7,6 +7,7 @@ networks:
 
 services:
   alert-manager:
+    container_name: alert-manager
     image: prom/alertmanager:${ALERT_MANAGER_VERSION:-v0.27.0}
     volumes:
       - "./alertmanager/alertmanager.yml:/alertmanager/alertmanager.yml"
@@ -14,3 +15,4 @@ services:
       - 9093:9093
     networks:
       - monitoring
+    restart: unless-stopped
