@@ -26,7 +26,8 @@ services:
       - "--grpc-address=0.0.0.0:10901"
       - "--http-address=0.0.0.0:10902"
       - "--query.replica-label=replica"
-      - "--store=0.0.0.0:10901"
+      - "--store=${THANOS_SIDECAR_IP}:${THANOS_SIDECAR_GRPC_PORT:-10901}"
+      # Add more store addresses if more sidecars are present      
     ports:
       - 10902:10902
     networks:

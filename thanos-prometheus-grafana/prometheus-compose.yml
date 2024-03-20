@@ -57,8 +57,8 @@ services:
       - "sidecar"
       - "--tsdb.path=/prometheus"
       - "--prometheus.url=http://prometheus:9090"
-      - "--grpc-address=0.0.0.0:10901"
-      - "--http-address=0.0.0.0:10902"
+      - "--grpc-address=0.0.0.0:${THANOS_SIDECAR_GRPC_PORT:-10901}"
+      - "--http-address=0.0.0.0:${THANOS_SIDECAR_HTTP_PORT:-10902}"
       # - '--objstore.config-file=/etc/thanos/bucket_config.yaml'
     container_name: thanos-sidecar
     networks:
@@ -68,5 +68,4 @@ services:
     ports:
       - 10901:10901
     restart: unless-stopped
-
 
