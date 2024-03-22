@@ -6,7 +6,7 @@ prometheus-grafana/prometheus/*
 !prometheus-grafana/prometheus/rules.yml
 
 thanos-prometheus-grafana-alertmanager/grafana/*
-!thanos-prometheus-grafana/grafana/provisioning
+!thanos-prometheus-grafana-alertmanager/grafana/provisioning
 
 thanos-prometheus-grafana-alertmanager/prometheus/data
 
