@@ -6,11 +6,15 @@ networks:
     external: true
 
 services:
-  alert-manager:
-    container_name: alert-manager
+  alertmanager:
+    container_name: alertmanager
     image: prom/alertmanager:${ALERT_MANAGER_VERSION:-v0.27.0}
     volumes:
-      - "./alertmanager/alertmanager.yml:/alertmanager/alertmanager.yml"
+      - ./alertmanager/:/etc/alertmanager/
+    command:
+      - '--config.file=/etc/alertmanager/config.yml'
+      - '--storage.path=/alertmanager'
+      - '--log.level=debug'
     ports:
       - 9093:9093
     networks:

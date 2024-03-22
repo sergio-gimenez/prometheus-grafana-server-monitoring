@@ -1,0 +1,14 @@
+global:
+# The root route on which each incoming alert enters.
+route:
+  group_by: ["DummyAlertForTesting"]
+  group_wait: 0s
+  group_interval: 10s
+  repeat_interval: 1m
+
+  receiver: kafka_webhook
+
+receivers:
+  - name: "kafka_webhook"
+    webhook_configs:
+      - url: "http://192.168.40.115:9097/webhook"
